@@ -1,0 +1,1 @@
+﻿Get-NetAdapter|Sort-Object Status -Descending|Format-Table Name,InterfaceDescription,Status,LinkSpeed,MacAddress -AutoSize;Write-Host '';Get-NetIPConfiguration|Where-Object IPv4Address|Format-List InterfaceAlias,IPv4Address,IPv4DefaultGateway,DNSServer

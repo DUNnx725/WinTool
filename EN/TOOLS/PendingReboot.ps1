@@ -1,0 +1,1 @@
+﻿$p=(Test-Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending') -or (Test-Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired');Write-Host ('Pending restart: '+$(if($p){'YES'}else{'NO'}))

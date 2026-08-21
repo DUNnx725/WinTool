@@ -1,0 +1,1 @@
+﻿$cut=(Get-Date).AddDays(-7); foreach($d in @($env:TEMP,"$env:windir\Temp")){if(Test-Path $d){Get-ChildItem $d -Force -ErrorAction SilentlyContinue|Where-Object LastWriteTime -lt $cut|Remove-Item -Recurse -Force -ErrorAction SilentlyContinue}}; Write-Host '[OK] Old temporary files processed.'

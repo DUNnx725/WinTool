@@ -1,0 +1,1 @@
+﻿$servers=@{'Cloudflare'='1.1.1.1';'Google'='8.8.8.8';'Quad9'='9.9.9.9'};foreach($k in $servers.Keys){$p=Test-Connection $servers[$k] -Count 6 -ErrorAction SilentlyContinue;if($p){'{0,-12} {1,6:N1} ms' -f $k,(($p|Measure-Object ResponseTime -Average).Average)}else{'{0,-12} sin respuesta' -f $k}}

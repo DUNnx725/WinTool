@@ -1,0 +1,5 @@
+﻿param([ValidateSet('Cloudflare','Google','Quad9','Automatic','Restore')][string]$Mode,[string]$BackupFile)
+$a=Get-NetAdapter|Where-Object Status -eq Up|Select-Object -First 1;if(!$a){Write-Host '[ERROR] No active network adapter.';exit 2}
+if($Mode -eq 'Restore'){if(Test-Path $BackupFile){$b=Get-Content $BackupFile -Raw|ConvertFrom-Json;if($b.Dhcp){Set-DnsClientServerAddress -InterfaceIndex $a.ifIndex -ResetServerAddresses}else{Set-DnsClientServerAddress -InterfaceIndex $a.ifIndex -ServerAddresses $b.Servers};Write-Host '[OK] DNS restored.'}else{Write-Host '[INFO] No backup found.'};exit}
+if(!(Test-Path $BackupFile)){$s=(Get-DnsClientServerAddress -InterfaceIndex $a.ifIndex -AddressFamily IPv4).ServerAddresses;@{Dhcp=(@($s).Count -eq 0);Servers=@($s)}|ConvertTo-Json|Set-Content $BackupFile -Encoding UTF8}
+if($Mode -eq 'Automatic'){Set-DnsClientServerAddress -InterfaceIndex $a.ifIndex -ResetServerAddresses}else{$map=@{Cloudflare=@('1.1.1.1','1.0.0.1');Google=@('8.8.8.8','8.8.4.4');Quad9=@('9.9.9.9','149.112.112.112')};Set-DnsClientServerAddress -InterfaceIndex $a.ifIndex -ServerAddresses $map[$Mode]};Clear-DnsClientCache;Write-Host ('[OK] DNS: '+$Mode)
