@@ -6,11 +6,12 @@ WinTool interacts with Windows system settings and diagnostic tools, so security
 
 ## Supported Versions
 
-WinTool is currently in its first public release.
+WinTool v1.1.x is the current supported public release.
 
 | Version | Supported |
 | ------- | --------- |
-| 1.0.x   | Yes       |
+| 1.1.x   | Yes       |
+| 1.0.x   | No        |
 | < 1.0   | No        |
 
 Development builds and internal test versions are not considered supported public releases.

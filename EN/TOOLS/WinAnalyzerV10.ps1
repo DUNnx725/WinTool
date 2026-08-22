@@ -937,7 +937,7 @@ $capInfo=DetectFpsCap $pm
 
 $summary=[pscustomobject]@{
     Version='1.0'
-    WinToolVersion='1.0.0'
+    WinToolVersion='1.1.0'
     Date=(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
     Game=$target.Friendly
     Process=$target.Name

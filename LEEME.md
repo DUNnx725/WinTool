@@ -10,8 +10,8 @@ WinTool está diseñado para hacer que las herramientas de diagnóstico, manteni
 
 Descargá la última versión estable desde la sección **Releases** de este repositorio.
 
-- `WinTool_v1.0.0_ES.zip` — Español
-- `WinTool_v1.0.0_EN.zip` — English
+- `WinTool_v1.1.0_ES.zip` — Español
+- `WinTool_v1.1.0_EN.zip` — English
 
 > [!IMPORTANT]
 > Para uso normal, descargá WinTool desde **Releases** en lugar de utilizar `Code > Download ZIP`.
