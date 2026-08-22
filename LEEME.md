@@ -1,33 +1,45 @@
 # WinTool
 
-Herramienta de código abierto para diagnóstico, mantenimiento y optimización de Windows.
+**Herramienta de código abierto para diagnóstico, mantenimiento y optimización de Windows.**
 
 WinTool está diseñado para hacer que las herramientas de diagnóstico, mantenimiento y rendimiento de Windows sean más fáciles de entender y utilizar, manteniendo los cambios controlados y reversibles siempre que sea posible.
 
-## Funciones principales
+**Windows 10 / 11 • Español / English • Código abierto**
 
-- Estado y diagnóstico de la PC
+## 🚀 Descarga
+
+Descargá la última versión estable desde la sección **Releases** de este repositorio.
+
+- `WinTool_v1.0.0_ES.zip` — Español
+- `WinTool_v1.0.0_EN.zip` — English
+
+> [!IMPORTANT]
+> Para uso normal, descargá WinTool desde **Releases** en lugar de utilizar `Code > Download ZIP`.
+
+## ✨ Características
+
+- Estado de la PC y diagnóstico del sistema
 - Alertas inteligentes
 - Mantenimiento inteligente
 - Optimización para juegos
 - Configuración de privacidad recomendada
 - Herramientas de red y DNS
-- Reparación de Windows
-- Herramientas para drivers y hardware
+- Herramientas de reparación de Windows
+- Utilidades para controladores y hardware
 - Actualización de software mediante WinGet
 - Análisis de rendimiento
-- WinAnalyzer para analizar el rendimiento en juegos
+- Analizador de rendimiento para juegos WinAnalyzer
 
-## WinAnalyzer
+## 🎮 WinAnalyzer
 
-WinAnalyzer es el módulo de análisis de juegos de WinTool.
+WinAnalyzer es el módulo de análisis de rendimiento en juegos de WinTool.
 
-Puede medir y mostrar información como:
+Puede medir y presentar información como:
 
 - FPS promedio
-- 1% Low
-- FPS mínimo detectado
-- Estabilidad de FPS
+- 1% Low FPS
+- FPS mínimos detectados
+- Estabilidad de los FPS
 - Uso de CPU
 - Núcleo de CPU más utilizado
 - Uso de GPU
@@ -35,14 +47,35 @@ Puede medir y mostrar información como:
 - Posibles límites de FPS / VSync
 - Posibles cuellos de botella de CPU o GPU
 
-Los resultados principales están diseñados para ser fáciles de entender, mientras que la información más técnica se mantiene disponible por separado.
+Los resultados principales están diseñados para ser fáciles de entender, mientras que la información más técnica permanece disponible por separado.
 
-## Compatibilidad
+## 🧰 Primeros pasos
+
+1. Descargá el ZIP correspondiente desde **Releases**.
+2. Extraé el archivo completo.
+3. Abrí la carpeta de WinTool extraída.
+4. Ejecutá `WinTool.bat`.
+5. Seguí las opciones que aparecen en pantalla.
+
+Algunas herramientas pueden solicitar permisos de administrador cuando sean necesarios.
+
+## 🛡️ Seguridad
+
+WinTool prioriza los cambios controlados y el diagnóstico antes de modificar el sistema.
+
+Las funciones de optimización están diseñadas para evitar ajustes inseguros como la prioridad de proceso Realtime, cambios arbitrarios de afinidad de CPU, modificaciones de HPET/BCD, desactivar el archivo de paginación o desactivar servicios críticos de Windows.
+
+Varias modificaciones incluyen mecanismos de copia de seguridad o restauración.
+
+> [!WARNING]
+> WinTool puede modificar configuraciones de Windows. Revisá la información mostrada antes de aplicar cambios.
+
+## 🖥️ Compatibilidad
 
 - Windows 10 de 64 bits
 - Windows 11 de 64 bits
 
-## Idiomas
+## 🌐 Idiomas
 
 WinTool está disponible en:
 
@@ -51,30 +84,26 @@ WinTool está disponible en:
 
 Documentación en inglés: [README.md](README.md)
 
-## Seguridad
+## 📦 Componentes de terceros
 
-WinTool prioriza los cambios controlados y el diagnóstico antes de realizar modificaciones.
+WinTool utiliza componentes de código abierto de terceros para funciones específicas.
 
-Las funciones de optimización están diseñadas para evitar ajustes poco seguros como prioridad de procesos Realtime, cambios arbitrarios de afinidad de CPU, modificaciones de HPET/BCD, desactivar el archivo de paginación o deshabilitar servicios críticos de Windows.
+PresentMon es utilizado por WinAnalyzer para capturar información sobre el rendimiento de fotogramas.
 
-Varias modificaciones incluyen mecanismos de copia de seguridad o restauración.
+Los proyectos de terceros continúan siendo propiedad de sus respectivos autores y se distribuyen de acuerdo con sus respectivas licencias.
 
-## Componentes de terceros
+Consultá [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) para obtener más información.
 
-WinTool utiliza componentes de código abierto de terceros para determinadas funciones.
+## 🔐 Seguridad del proyecto
 
-PresentMon es utilizado por WinAnalyzer para capturar información sobre el rendimiento de los frames.
+La información de seguridad y las instrucciones para reportar vulnerabilidades están disponibles en [SECURITY.md](SECURITY.md).
 
-Los proyectos de terceros pertenecen a sus respectivos autores y se distribuyen de acuerdo con sus respectivas licencias.
-
-Consulta `THIRD_PARTY_NOTICES.md` para obtener más información.
-
-## Licencia
+## 📜 Licencia
 
 WinTool es software de código abierto publicado bajo la GNU General Public License v3.0.
 
-Consulta [LICENSE](LICENSE) para obtener más información.
+Consultá [LICENSE](LICENSE) para más información.
 
-## Autor
+## 👤 Autor
 
 Desarrollado por **DUNnx725**.
